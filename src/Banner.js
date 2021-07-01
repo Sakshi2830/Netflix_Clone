@@ -31,17 +31,19 @@ console.log(movies)
          className="banner"
          style={{
              backgroundSize: "cover",
-             backgroundImage: `url("https://i.pinimg.com/736x/62/cb/b8/62cbb8138fd6c38a72198e09859a5426.jpg")`,
+             backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies?.backdrop_path}")`,
              backgroundPosition: "center center"
          }}
          >
 <div className="banner__contents">
-<h1 className="banner__title">Movie Name</h1>
+<h1 className="banner__title">
+    {movies?.title || movies?.name || movies?.original_name}
+</h1>
 <div className="banner__buttons">
     <button className="banner__button">Play</button>
     <button className="banner__button">My List</button>
 </div>
-<h1 className="banner__description">{truncate(`This is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test DescriptionThis is Test Description`,150)}</h1>
+<h1 className="banner__description">{truncate(movies?.overview,200)}</h1>
 </div>
 <div className="banner--fadeBottom"/>
          </header>
