@@ -26,6 +26,7 @@
 .signupScreen > form > h1{
     text-align: left;
     margin-bottom: 25px;
+    margin-top: -20px;
 }
 ::placeholder{
     color: rgb(162, 149, 149);
