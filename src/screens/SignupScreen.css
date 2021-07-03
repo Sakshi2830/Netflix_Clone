@@ -1,10 +1,11 @@
 .signupScreen{
     margin-top: -20px;
-    max-width: 300px;
+    max-width: 250px;
     padding: 70px;
     margin-left: auto;
     margin-right: auto;
     background: rgba(0, 0, 0, 0.85);
+   
 }
 
 .signupScreen > form {
@@ -12,12 +13,17 @@
     flex-direction: column;
 }
 
-.signupScreen > h4{
+
+.signupScreen > form > h4{
     text-align: left;
-    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.signupScreen__gray{
+    color: rgb(162, 156, 156);
 }
 
-h1{
+
+.signupScreen > form > h1{
     text-align: left;
     margin-bottom: 25px;
 }
@@ -44,4 +50,28 @@ h1{
     cursor: pointer;
     margin-top: 20px;
     font-weight: bold
+}
+.signupScreen__link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.signupScreen > form > h5{
+    text-align: left;
+    margin-top: 30px;
+    font-weight: normal;
+    color: grey;
+}
+
+.signupScreen > form > h6{
+    text-align: left;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.signupScreen__info{
+    color: rgb(162, 149, 149);
+}
+.signupScreen__info__link{
+    font-weight: bold;
+    color: rgb(27, 128, 155);
 }
