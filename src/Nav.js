@@ -33,7 +33,7 @@ function Nav() {
             <img 
             onClick={() => history.push("/profile")}
             className="nav__avatar" 
-            src="https://www.pinclipart.com/picdir/middle/547-5474602_character-avatar-clipart.png" alt="" />
+            src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png" alt="" />
             
             </div>   
         </div>
