@@ -29,6 +29,14 @@ function Nav() {
             className="nav__logo"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png" 
             alt="netflix logo" />
+            <ul className="nav__list">
+            <li>Home</li>
+            <li>TV Shows</li>
+            <li>Movies</li>
+            <li>New {"&"} Popular</li>
+            <li>My List</li>
+           
+            </ul>
 
             <img 
             onClick={() => history.push("/profile")}
