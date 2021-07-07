@@ -28,6 +28,10 @@ useEffect(() => {
 
 console.log(products);
 
+const loadCheckout = async (priceId) => {
+
+};
+
     return (
         <div className="plansScreen">
            {Object.entries(products).map(([productId, productData]) =>{
@@ -39,7 +43,7 @@ console.log(products);
                            <h5>{productData.name}</h5>
                            <h6>{productData.description}</h6>
                        </div>
-                       <button>Subscribe</button>
+                       <button onClick={() => loadCheckout(productData.prices.priceId)}> Subscribe</button>
                    </div>
                )
 
