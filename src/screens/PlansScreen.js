@@ -35,7 +35,11 @@ console.log(products);
 
                return(
                    <div className="plansScreen__plans">
-                       
+                       <div className="plansScreen__info">
+                           <h5>{productData.name}</h5>
+                           <h6>{productData.description}</h6>
+                       </div>
+                       <button>Subscribe</button>
                    </div>
                )
 
