@@ -89,6 +89,7 @@ const loadCheckout = async (priceId) => {
 
     return (
         <div className="plansScreen">
+            {subscription && <p>Renewal date : {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}</p>}
            {Object.entries(products).map(([productId, productData]) =>{
                //TODO: add some logic to check if the user's subscription is active...
 
@@ -99,7 +100,7 @@ const loadCheckout = async (priceId) => {
                return(
                    <div 
                    key={productId}
-                   className={`${ isCurrentPackage && "plansScreen__plan--disabled"}
+                   className={`${ isCurrentPackage && "plansScreen__plans--disabled"}
                    plansScreen__plans`}>
                        <div className="plansScreen__info">
                            <h5>{productData.name}</h5>
