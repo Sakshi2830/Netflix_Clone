@@ -1,10 +1,12 @@
 import React, { useRef } from 'react'
+import { useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
 import "./SignupScreen.css"
 
 function SignInScreen() {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+    const history = useHistory();
 
 
     const register = (e) => {
@@ -19,6 +21,7 @@ function SignInScreen() {
             .catch((error) =>{
                 alert(error.message);
             })
+            history.push("/profile")
     }
 
     const signIn = (e) =>{
@@ -31,6 +34,7 @@ function SignInScreen() {
         }).catch((error) =>{
             alert(error.message)
         })
+        history.push("/profile")
     }
 
 
