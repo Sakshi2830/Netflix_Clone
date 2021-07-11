@@ -10,7 +10,7 @@ function PlansScreen() {
 const [products, setProducts] = useState([]);
 const user = useSelector(selectUser);
 const [subscription, setSubscription] = useState(null);
-const history = useHistory();
+const history = useHistory()
 
 
 useEffect(() => {
@@ -98,7 +98,9 @@ const loadCheckout = async (priceId) => {
 
                const isCurrentPackage = productData.name
                ?.includes(subscription?.role)
-
+                // if(isCurrentPackage){
+                //     history.push("/")
+                // }
 
                return(
                    <div 
@@ -110,8 +112,10 @@ const loadCheckout = async (priceId) => {
                            <h6>{productData.description}</h6>
                        </div>
                        <button onClick={() => 
-                        !isCurrentPackage && loadCheckout(productData.prices.priceId)}
-                        onClick={() => isCurrentPackage && history.push("/")}
+                       ( !isCurrentPackage && loadCheckout(productData.prices.priceId)) ||
+                       (isCurrentPackage && history.push("/"))
+                    }
+                        
                         > 
                        {isCurrentPackage ? "Play" :"Subscribe"}
                        </button>
