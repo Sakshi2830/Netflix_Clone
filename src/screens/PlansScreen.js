@@ -4,11 +4,13 @@ import "./PlansScreen.css"
 import { useSelector } from 'react-redux';
 import  {selectUser} from "../features/userSlice"
 import { loadStripe } from "@stripe/stripe-js"
+import { useHistory } from 'react-router-dom';
 
 function PlansScreen() {
 const [products, setProducts] = useState([]);
 const user = useSelector(selectUser);
 const [subscription, setSubscription] = useState(null);
+const history = useHistory();
 
 
 useEffect(() => {
@@ -108,8 +110,10 @@ const loadCheckout = async (priceId) => {
                            <h6>{productData.description}</h6>
                        </div>
                        <button onClick={() => 
-                        !isCurrentPackage && loadCheckout(productData.prices.priceId)}> 
-                       {isCurrentPackage ? "Current Package" :"Subscribe"}
+                        !isCurrentPackage && loadCheckout(productData.prices.priceId)}
+                        onClick={() => isCurrentPackage && history.push("/")}
+                        > 
+                       {isCurrentPackage ? "Play" :"Subscribe"}
                        </button>
                    </div>
                )
