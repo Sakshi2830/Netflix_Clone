@@ -18,6 +18,7 @@ useEffect(() => {
     }
     fetchData();
 }, [fetchUrl])
+console.log(movies)
 
 const opts = {
     height: "390",
@@ -52,12 +53,20 @@ const handleClick = (movie) =>{
             (!isLargeRow && movie.backdrop_path)) && (
                 <img className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                 key={movie.id}
-                onClick={() => handleClick(movie)}
+                onClick={() => handleClick(movie )}
                 src={`${base_url}${
                     isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`} alt={movie.name} />
+                }`} alt={movie.name} 
+             
+                />
+                
                
-            ))}
+            )
+            )
+            
+            }
+
+            
             <div>
                 {trailerUrl && <YouTube videoId={trailerUrl}  opts={opts}/>}
             </div>
