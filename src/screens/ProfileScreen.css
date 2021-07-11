@@ -1,7 +1,7 @@
 .profileScreen{
     height: 100vh;
     color: white;
-    min-height: 930px;
+    min-height: 990px;
 }
 .profileScreen__body{
     display: flex;
