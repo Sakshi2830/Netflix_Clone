@@ -4,6 +4,7 @@ import "./HomeScreen.css"
 import Nav from '../Nav'
 import Row from '../Row'
 import requests from '../Request'
+import FooterBar from '../footer'
 
 
 function HomeScreen() {
@@ -30,7 +31,8 @@ function HomeScreen() {
         <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
         <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
 
-            
+         <FooterBar/>
+
         </div>
     )
 }
