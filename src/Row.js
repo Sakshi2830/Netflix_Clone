@@ -65,7 +65,7 @@ const handleClick = (movie) =>{
             )
             
             }
-
+<p>{movies.overview}</p>
             
             <div>
                 {trailerUrl && <YouTube videoId={trailerUrl}  opts={opts}/>}
