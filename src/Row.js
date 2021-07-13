@@ -41,11 +41,9 @@ const handleClick = (movie) =>{
         .catch((error) => console.log(error))
     }
 };
-
     return (
         <div className="row">
             <h2>{title}</h2>
-
         <div className="row__posters">
 
             {movies.map((movie)=> 
